@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% set version = '0.01' %}
+
+  {% include '_includes/global/head' with {version: version} %}
+
+  <body class="{{class|default('')}}">
+
+    {% include '_includes/global/navbar' %}
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    {% include '_includes/global/footer' %}
+
+    {% include '_includes/global/scripts' with {version: version} %}
+  </body>
+</html>
