@@ -1,0 +1,43 @@
+{% extends "_layout" %}
+
+{% block content %}
+
+<section>
+
+  <div class="section-wrapper shop detail">
+
+    {# <div class="shop-detail-header">
+      <a href="/shop" class="nav-shop"><i class="fa fa-caret-left" aria-hidden="true"></i> Back To Shop</a>
+    </div> #}
+
+    <div class="shop-detail">
+        
+        {% set image = entry.mainImage.one() %}
+        <article class="shop-pics">
+              <img class="image" src="{{ image.url }}" data-action="zoom"/>
+              <div class="caption">
+                <span class="name">{{ entry.title }}</span>, <em>{{ entry.media }}, {{ entry.dimensions.height }} x {{ entry.dimensions.width }} inches, {{ entry.yearOfCompletion }}</em>
+              </div>
+        </article>
+
+
+        {# <article id="sticky" class="detail-card">
+            <div class="shop-item-info">
+              <p class="name">{{ entry.title }}</p>
+              <p class="title"><em>{{ entry.media }}, {{ entry.dimensions.height }} x {{ entry.dimensions.width }} inches</em></p>
+              <hr>
+        </article> #}
+
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+{% endblock %}

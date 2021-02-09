@@ -9,13 +9,15 @@
       }
   ],
   "require": {
-    "craftcms/cms": "^3.5.0",
+    "craftcms/cms": "3.6.3",
     "vlucas/phpdotenv": "^3.4.0",
     "craftcms/aws-s3": "^1.2.5",
     "craftcms/redactor": "^2.4.0",
     "doublesecretagency/craft-cpcss": "^2.2.0",
     "dutchheight/aws-serverless-image-handler": "^1.1.2",
-    "verbb/super-table": "^2.3.0"
+    "verbb/super-table": "2.6.6",
+    "craftcms/feed-me": "4.3.4",
+    "miranj/craft-obfuscator": "1.0.4"
   },
   "require-dev": {
     "yiisoft/yii2-shell": "^2.0.3"
@@ -28,7 +30,7 @@
   "config": {
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.0"
+      "php": "7.4"
     }
   },
   "scripts": {

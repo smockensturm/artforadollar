@@ -1,0 +1,34 @@
+contentColumnType: string
+fieldGroup: a1b8b412-08d9-4fc7-ad41-37ca2649ce05
+handle: dimensions
+instructions: ''
+name: Dimensions
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - 8fd294e0-ce65-4ea8-8dcd-bcd90a644b8e
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 6bb72f59-38e0-44af-8d40-007a0928ed86
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_dimensions}}'
+  fieldLayout: table
+  maxRows: ''
+  minRows: ''
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: '1'
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

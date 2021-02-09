@@ -1,0 +1,136 @@
+.shop-grid {
+    grid-column: 2 / span 12;
+
+    .col-sizer,
+    .col-sizer-99days {
+        width: 23%;
+        padding: 1%;
+    }
+
+    .shop-item ,
+    .shop-item-99days{
+        width: 23%;
+        &.double-wide {
+            width: 48%;
+        }
+        margin-bottom: 2%;
+        display: flex;
+        padding: 0;
+        //background-color: white;
+        //transition: all .2s;
+
+        &:hover {
+            .image {
+                transform: scale(1.02);
+            }
+            //box-shadow: 4px 4px 10px #dddddd;
+        }
+
+        .image {
+            width: 100%;
+            box-shadow: 4px 4px 10px #ddd;
+            margin: 0;
+            transition: all .2s;
+        }
+    }
+
+    .col-sizer-99days {
+        width: 10.12%;
+        padding: .5%;
+    }
+    .shop-item-99days {
+        width: 10.12%;
+        margin-bottom: 1%;
+    }
+
+
+    @media screen and (max-width: $lg) {
+        .col-sizer {
+            width: 30%;
+            padding: 1.667%;
+        }
+        .shop-item{
+            width: 30%;
+            margin-bottom: 3.33%;
+            &.double-wide {
+                width: 63.5%;
+            }
+        }
+        .col-sizer-99days {
+            width: 18.5%;
+            padding: .75%;
+        }
+        .shop-item-99days {
+            width: 18.5%;
+            margin-bottom: 1.5%;
+        }
+    }
+
+    @media screen and (max-width: $md) {
+        .col-sizer {
+            width: 45%;
+            padding: 2.5%
+        }
+        .shop-item{
+            width: 45%;
+            margin-bottom: 2%;
+            &.double-wide {
+                width: 95%;
+            }
+        }
+        .col-sizer-99days {
+            width: 45%;
+            padding: 2.5%;
+        }
+        .shop-item-99days {
+            width: 45%;
+            margin-bottom: 5%;
+        }
+        
+    }
+
+    @media screen and (max-width: $sm) {
+        .col-sizer,
+        .col-sizer-99days{
+            width: 100%;
+            padding: 0;
+        }
+        .shop-item,
+        .shop-item-99days{
+            width: 100%;
+            &.double-wide {
+                width: 100%;
+            }
+        }      
+    }
+
+    .shop-item-99days:hover .image {
+        transform: scale(1.08);
+    }
+
+}
+
+.lightbox .lb-image {
+    border-radius: 0;
+    border: none;
+}
+
+.lightboxOverlay {
+    opacity: 1;
+    background-color: rgb(58, 65, 55)
+}
+
+.lb-data .lb-caption {
+    font-size: 1rem;
+    line-height: 1em;
+    font-weight: 300;
+    .name {
+        font-weight: 800;
+    }
+}
+
+p.large {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    font-weight: 100;
+}

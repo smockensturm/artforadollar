@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "cp.css",
+	"sources": [
+		"scss/control-panel/main.scss"
+	],
+	"mappings": "",
+	"names": []
+}

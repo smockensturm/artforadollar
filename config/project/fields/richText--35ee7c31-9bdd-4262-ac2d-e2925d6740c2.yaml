@@ -1,0 +1,27 @@
+contentColumnType: text
+fieldGroup: a1b8b412-08d9-4fc7-ad41-37ca2649ce05
+handle: richText
+instructions: ''
+name: 'Rich Text'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  cleanupHtml: true
+  columnType: text
+  configSelectionMode: manual
+  defaultTransform: 2e11f6e6-6ab5-4999-8bc2-be966a287fdf
+  manualConfig: "{\r\n    \"buttons\": [\r\n        \"html\",\r\n        \"formatting\",\r\n        \"bold\",\r\n        \"italic\",\r\n        \"unorderedlist\",\r\n        \"link\",\r\n        \"file\",\r\n        \"image\"\r\n    ],\r\n    \"plugins\": [\r\n        \"fullscreen\", \"table\"\r\n    ],\r\n    \"imageResizable\": true,\r\n    \"imagePosition\": true,\r\n    \"imageLink\": false,\r\n    \"toolbarFixed\": true,\r\n    \"formatting\": [\"p\", \"h2\", \"h3\", \"h4\", \"blockquote\"],\r\n    \"linkNewTab\": true,\r\n  \t\"formattingAdd\": {\r\n    \"medium-paragraph\": {\r\n      \"title\": \"Medium Paragraph\",\r\n      \"api\": \"module.block.format\",\r\n      \"args\": {\r\n        \"tag\": \"p\",\r\n        \"class\": \"medium\",\r\n        \"type\": \"toggle\"\r\n      }\r\n    },\r\n    \"medium-small-paragraph\": {\r\n      \"title\": \"Small Paragraph\",\r\n      \"api\": \"module.block.format\",\r\n      \"args\": {\r\n        \"tag\": \"p\",\r\n        \"class\": \"small\",\r\n        \"type\": \"toggle\"\r\n      }\r\n    }\r\n  }\r\n}"
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: Standard.json
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showHtmlButtonForNonAdmins: ''
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

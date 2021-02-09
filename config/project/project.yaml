@@ -1,0 +1,35 @@
+dateModified: 1612818235
+email:
+  fromEmail: smockensturm@gmail.com
+  fromName: 'The Kidder'
+  transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 4.3.0
+  obfuscator:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.1
+system:
+  edition: solo
+  live: true
+  name: 'Art For A Dollar'
+  retryDuration: null
+  schemaVersion: 3.6.1
+  timeZone: America/Detroit
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

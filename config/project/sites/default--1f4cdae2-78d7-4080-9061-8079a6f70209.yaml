@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: en-US
+name: 'Art For A Dollar'
+primary: true
+siteGroup: 82760614-b437-44fb-9895-b8cdc72086f1
+sortOrder: 1

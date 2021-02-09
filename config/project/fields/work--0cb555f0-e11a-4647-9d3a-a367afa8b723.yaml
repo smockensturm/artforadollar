@@ -1,0 +1,20 @@
+contentColumnType: string
+fieldGroup: a1b8b412-08d9-4fc7-ad41-37ca2649ce05
+handle: work
+instructions: ''
+name: Work
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: ''
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: null
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

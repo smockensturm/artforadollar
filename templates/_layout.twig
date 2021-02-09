@@ -1,20 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  {% set version = '0.01' %}
+	{% set version = '0.01' %}
 
-  {% include '_includes/global/head' with {version: version} %}
+	{% include '_includes/global/head' with {version: version} %}
 
-  <body class="{{class|default('')}}">
+	<body class="{{class|default('')}}">
 
-    {% include '_includes/global/navbar' %}
+		<main>
+			{% block content %}{% endblock %}
+		</main>
 
-    <main>
-      {% block content %}{% endblock %}
-    </main>
+		{% include '_includes/global/footer' %}
 
-    {% include '_includes/global/footer' %}
+		<div class="hamburger-nav-wrapper">
 
-    {% include '_includes/global/scripts' with {version: version} %}
-  </body>
+			<div class="hamburger hamburger--slider nav-trigger" data-open-modal="navigation-modal" type="button">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</div>
+
+			{# <div class="menu-id">
+				<p>MENU</p>
+			</div> #}
+		</div>
+
+		<nav class="navigation-modal">
+
+		<section>
+			<div class="container">
+
+				<figure class="page-head">
+					<div claSS="intro">
+						<h1>S. Mockensturm</h1>
+					</div>
+				</figure>
+
+				<div class="naav">
+
+					<section data-navigation-name="">
+						<h5>Painting / Drawing</h5>
+						<nav>
+							<a data-navigation-name="" href="/the-latest">Latest</a>
+							<a data-navigation-name="" href="/earlier">Earlier</a>
+							<a data-navigation-name="" href="/process">Process</a>
+						</nav>
+					</section>
+
+
+					<section data-navigation-name="">
+						<h5>Assignments</h5>
+						<nav>
+							<a data-navigation-name="" href="/99days">99 Days</a>
+							<a data-navigation-name="" href="/produce-produce">Produce Produce</a>
+							<a data-navigation-name="" href="/harrys-photos">Harry's Photos</a>
+						</nav>
+					</section>
+
+					<section data-navigation-name="">
+						<h5>Log</h5>
+						<nav>
+							<a data-navigation-name="" href="/log">Why Art For A Dollar?</a>
+						</nav>
+					</section>
+
+				</div>
+			<div>
+
+
+
+		</section>
+
+		{% include '_includes/global/footer' %}
+
+
+		</nav>
+
+		{% include '_includes/global/scripts' with {version: version} %}
+	</body>
 </html>
+

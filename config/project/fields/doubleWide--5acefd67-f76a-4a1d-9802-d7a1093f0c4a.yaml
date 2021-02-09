@@ -1,0 +1,13 @@
+contentColumnType: boolean
+fieldGroup: a1b8b412-08d9-4fc7-ad41-37ca2649ce05
+handle: doubleWide
+instructions: ''
+name: 'Double Wide'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

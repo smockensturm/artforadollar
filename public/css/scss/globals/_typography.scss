@@ -1,0 +1,137 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    // text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    margin:0;
+}
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    @include fluid-type(font-size, 300px, 1600px, 24px, 30px);
+    @include fluid-type(line-height, 300px, 1600px, 32px, 42px);
+    letter-spacing: -.5px;
+    line-height: 2.5rem;
+}
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  @include fluid-type(font-size, 300px, 1600px, 26px, 32px);
+  @include fluid-type(line-height, 300px, 1600px, 28px, 34px);
+  letter-spacing: -.03rem;
+  margin-bottom: 1rem;
+}
+h3 {
+  @include fluid-type(font-size, 300px, 1600px, 18px, 24px);
+  @include fluid-type(line-height, 300px, 1600px, 20px, 26px);
+  font-weight: 700;
+  letter-spacing: -.03rem;
+}
+h4 {
+  font-weight: 600;
+  @include fluid-type(font-size, 300px, 1600px, 14px, 14px);
+  @include fluid-type(line-height, 300px, 1600px, 13px, 16px);
+  letter-spacing: .1rem;
+}
+h5 {
+  font-weight: 400;
+  @include fluid-type(font-size, 300px, 1600px, 10px, 12px);
+  @include fluid-type(line-height, 300px, 1600px, 13px, 16px);
+  letter-spacing: .15rem;
+}
+h5:after {
+    /* bottom separation line */
+    content: '';
+    display:block;
+    height: 1px;
+    width: 40%;
+    background-color: currentColor;
+    opacity: .2;
+    margin: .5rem 0;
+}
+h6 {
+    font-weight: 400;
+    @include fluid-type(font-size, 300px, 1600px, 10px, 12px);
+    @include fluid-type(line-height, 300px, 1600px, 13px, 16px);
+    letter-spacing: 2px;
+}
+h6:after {
+    /* bottom separation line */
+    content: '';
+    display:block;
+    height: 1px;
+    width: 40%;
+    background-color: currentColor;
+    opacity: .1;
+    margin: 10px auto;
+}
+a {
+    text-decoration: none;
+}
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+blockquote {
+    font-weight: 100;
+    font-size: 2rem;
+    line-height: 2.6rem;
+    text-indent: -.4125em;
+}
+.strong {
+    font-weight: 700;
+}
+.stronger {
+    font-weight: 800;
+}
+.lighter {
+    font-weight: 400;
+}
+.center-text {
+    text-align: center;
+}
+.center-text p {
+    margin: auto;
+    margin-bottom: 1rem;
+}
+.right-text {
+    text-align: right;
+}
+
+
+
+p {
+  padding: 0;
+  margin: 0 0 16px 0;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  font-weight: 300;
+}
+.reversed{
+  color: #fff;
+}
+.lg-text p{
+  font-weight: 100;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.sm-text {
+  font-weight: 400;
+  font-size: .8rem;
+  line-height: 1.1rem;
+  opacity: .6;
+}
+
+.light-sub{
+  font-weight: 400;
+  font-size: .8rem;
+  letter-spacing: 3px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}

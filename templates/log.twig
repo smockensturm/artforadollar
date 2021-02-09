@@ -1,0 +1,24 @@
+{% extends "_layout" %}
+
+{% if craft.app.request.getSegment(1) %}
+  {% set slug = craft.app.request.getSegment(1) %}
+{% else %}
+  {% set slug = "the-latest" %}
+{% endif %}
+    
+{% set entry = craft.entries.section('logs').one() %}
+
+{% block content %}
+
+<section>
+  <div class="container copy">
+      <div class="page-content">
+        <div class="readable">
+          <h2>{{ entry.title }}</h2>
+          {{ entry.richText }}
+        </div>
+      </div>
+  </div>
+</section>
+
+{% endblock %}

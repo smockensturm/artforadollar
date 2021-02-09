@@ -4,17 +4,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-  <title>Title</title>
+  <title>{{ entry ?? entry.title ~ ' | '}}S. Mockensturm</title>
 
   <!-- Google search preview -->
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="description" content="Art For A Dollar is a repository of paintings, drawings and writing made by Stephen Mockensturm of Toledo, Ohio">
+  <meta name="keywords" content="painting, still life painting, oil painting, drawing, art, traditional art, light">
 
   <!-- Social preview -->
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="" />
+	<meta property="og:title" content="{{ entry is defined ? entry.title : 'S. Mockensturm' }}" />
 	<meta property="og:description" content="" />
-	<meta property="og:url" content="" />
+	<meta property="og:url" content="https://artforadollar.com" />
   <meta property="og:image" content="" />
 
   <meta name="twitter:card" content="">
@@ -26,7 +26,9 @@
 
   <!-- Links -->
   <link href="/css/main.css?v={{version}}" rel="stylesheet">
-  <link type="text/plain" href="/humans.txt" rel="author">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
 
   <!-- Load JS -->
   <script>

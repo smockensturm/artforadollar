@@ -20,3 +20,7 @@ node_modules/*
 /.idea
 /vendor
 .DS_Store
+public/assets/images/_large
+public/assets/images/_medium
+public/assets/images/_small
+public/assets/images/_thumb

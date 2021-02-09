@@ -10,10 +10,6 @@ module.exports = function(grunt) {
           "public/js/main.js": [
             "public/js/main/dependencies/*.js",
             "public/js/main/init.js"
-          ],
-          "public/js/map.js": [
-            "public/js/map/dependencies/*.js",
-            "public/js/map/init.js"
           ]
         }
       }

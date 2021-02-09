@@ -1,5 +1,7 @@
-<footer>
-  <div class="container">
-    
-  </div>
+<footer class="container">
+    <div class="wrapper center-text">
+      {% filter enkode_emails %}
+        <p class="sm-text">&copy; {{ now|date('Y') }} <a href="mailto:smockensturm@gmail.com">S. Mockensturm</a></p>
+      {% endfilter %}
+    </div>
 </footer>
