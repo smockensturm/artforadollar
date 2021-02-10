@@ -52,16 +52,10 @@ nav ul {
 
 .page-head {
   grid-column: 2 / span 12;
-
-  @media screen and (max-width: 1200px) {
-
-  }
   @media screen and (max-width: 768px) {
-      margin-left: 2rem;
       margin-bottom: 1rem;
   }
   @media screen and (max-width: 576px) {
-      margin-left: 3rem;
       margin-bottom: 2rem;
   }
 
@@ -121,6 +115,9 @@ nav ul {
 footer .wrapper {
   grid-column: 2 / span 12;
   width: 25%;
+  @media screen and (max-width: $sm) {
+    width: 50%;
+  }
   padding: 4rem;
   margin: 0 auto;
 }

@@ -78,7 +78,7 @@
   // z-index: 1001;
   // right: 0;
   // top: 0;
-  height: 30px;
+  height: 28px;
   width: 30px;
   background-color: red;
   border-radius: 0;
@@ -154,10 +154,10 @@ nav.navigation-modal{
       grid-column: 2 / span 12;
       margin: 0;
       @media screen and (max-width: 768px) {
-        margin-left: 2rem;
+        //margin-left: 2rem;
       }
       @media screen and (max-width: 576px) {
-          margin-left: 3rem;
+          //-left: 3rem;
       }
       .intro {
         max-width: 100%;
@@ -188,11 +188,11 @@ nav.navigation-modal{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       @media screen and (max-width: $md) {
-        margin-left: 2rem;
+        //margin-left: 2rem;
       }
       @media screen and (max-width: $sm) {
         grid-template-columns: 1fr;
-        margin-left: 3rem;
+        //margin-left: 3rem;
       }
     }
     

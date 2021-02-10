@@ -34,5 +34,7 @@ name: Images
 settings:
   path: '@root/public/assets/images'
 sortOrder: 1
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
 type: craft\volumes\Local
 url: '@web/assets/images'

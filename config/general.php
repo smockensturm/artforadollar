@@ -42,7 +42,7 @@ return [
         // Base site URL
         'siteUrl' => null,
         // Set this to `false` to prevent administrative changes from being made on staging
-        'allowAdminChanges' => true,
+        'allowAdminChanges' => false,
     ],
 
     // Production environment settings
@@ -50,6 +50,6 @@ return [
         // Base site URL
         'siteUrl' => null,
         // Set this to `false` to prevent administrative changes from being made on production
-        'allowAdminChanges' => true,
+        'allowAdminChanges' => false,
     ],
 ];
