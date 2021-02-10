@@ -57,7 +57,12 @@
 .hamburger-nav-wrapper {
   position: fixed;
   z-index: 1001;
-  right: 0;
+  left: 0;
+  right: auto;
+  @media screen and (max-width: 800px) {
+    left: auto;
+    right: 0;
+  }
   top: 0;
   display: flex;
   align-items: center;
@@ -78,7 +83,7 @@
   // z-index: 1001;
   // right: 0;
   // top: 0;
-  height: 28px;
+  height: 25px;
   width: 30px;
   background-color: red;
   border-radius: 0;
@@ -157,7 +162,7 @@ nav.navigation-modal{
         //margin-left: 2rem;
       }
       @media screen and (max-width: 576px) {
-          //-left: 3rem;
+          //margin-left: 3rem;
       }
       .intro {
         max-width: 100%;
@@ -187,6 +192,7 @@ nav.navigation-modal{
       grid-column: 2 / span 12;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 2rem;
       @media screen and (max-width: $md) {
         //margin-left: 2rem;
       }
@@ -199,7 +205,7 @@ nav.navigation-modal{
     section{
         z-index:2;
         display: block;
-        padding-top: 2rem;
+        margin-bottom: 2rem;
         h5 {
           font-size: 1rem;
           &:after {
@@ -219,7 +225,7 @@ nav.navigation-modal{
         }
        
 
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-down($md) {
           h5 {
             font-size: .85rem;
             &:after {
@@ -231,7 +237,7 @@ nav.navigation-modal{
           }
         }
 
-        @include media-breakpoint-down(xs) {
+        @include media-breakpoint-down($sm) {
           h5 {
             font-size: 1rem;
             &:after {
