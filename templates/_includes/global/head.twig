@@ -10,19 +10,24 @@
   <meta name="description" content="Art For A Dollar is a repository of paintings, drawings and writing made by Stephen Mockensturm of Toledo, Ohio">
   <meta name="keywords" content="painting, still life painting, oil painting, drawing, art, traditional art, light">
 
+  {% set image = craft.assets().volume().relatedTo}
+  {% set image = craft.assets()
+    .id('92')
+    .one() %}
+
   <!-- Social preview -->
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="{{ entry is defined ? entry.title : 'S. Mockensturm' }}" />
+	<meta property="og:title" content="{{ entry ?? entry.title ~ ' | '}}S. Mockensturm" />
 	<meta property="og:description" content="" />
 	<meta property="og:url" content="https://artforadollar.com" />
-  <meta property="og:image" content="" />
+  <meta property="og:image" content="{{ image.getUrl('medium') }}" />
 
   <meta name="twitter:card" content="">
-  <meta name="twitter:site" content="">
-  <meta name="twitter:creator" content="">
-  <meta name="twitter:title" content="">
+  <meta name="twitter:site" content="https://artforadollar.com">
+  <meta name="twitter:creator" content="S. MOckensturm">
+  <meta name="twitter:title" content="{{ entry ?? entry.title ~ ' | '}}S. Mockensturm">
   <meta name="twitter:description" content="">
-  <meta name="twitter:image" content="">
+  <meta name="twitter:image" content="{{ image.getUrl('medium') }}">
 
   <!-- Links -->
   <link href="/css/main.css?v={{version}}" rel="stylesheet">
