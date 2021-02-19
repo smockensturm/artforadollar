@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: a1b8b412-08d9-4fc7-ad41-37ca2649ce05
+handle: logBlocks
+instructions: ''
+name: 'Log Blocks'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_logblocks}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

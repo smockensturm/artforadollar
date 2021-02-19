@@ -1,4 +1,4 @@
-dateModified: 1612965042
+dateModified: 1613742394
 email:
   fromEmail: smockensturm@gmail.com
   fromName: 'The Kidder'
@@ -25,7 +25,7 @@ system:
   live: true
   name: 'Art For A Dollar'
   retryDuration: null
-  schemaVersion: 3.6.1
+  schemaVersion: 3.6.4
   timeZone: America/Detroit
 users:
   allowPublicRegistration: false

@@ -6,6 +6,6 @@ siteSettings:
   1f4cdae2-78d7-4080-9061-8079a6f70209:
     enabledByDefault: true
     hasUrls: true
-    template: log/_entry
+    template: log
     uriFormat: 'log/{slug}'
 type: channel
