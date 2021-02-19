@@ -61,9 +61,11 @@
 					<section data-navigation-name="">
 						<h5>Log</h5>
 						<nav>
-							{% set entries = craft.entries.section('logs').all() %}
+							{% set entries = craft.entries.section('logs').orderBy('postDate desc').all() %}
 							{% for entry in entries %}
 								<a data-navigation-name="" href="{{ entry.getUrl() }}">{{ entry.title }}</a>
+								          <p class="sm-text">{{entry.postDate|date('F j, Y')}}</p>
+
 							{% endfor %}
 						</nav>
 					</section>
