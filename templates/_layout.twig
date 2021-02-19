@@ -42,7 +42,7 @@
 					<section data-navigation-name="">
 						<h5>Painting / Drawing</h5>
 						<nav>
-							<a data-navigation-name="" href="/the-latest">Latest</a>
+							<a data-navigation-name="" href="/the-latest">The Latest</a>
 							<a data-navigation-name="" href="/earlier">Earlier</a>
 							<a data-navigation-name="" href="/process">Process</a>
 						</nav>
@@ -59,13 +59,12 @@
 					</section>
 
 					<section data-navigation-name="">
-						<h5>Log</h5>
+						<h5>Artists' Log</h5>
 						<nav>
 							{% set entries = craft.entries.section('logs').orderBy('postDate desc').all() %}
 							{% for entry in entries %}
 								<a data-navigation-name="" href="{{ entry.getUrl() }}">{{ entry.title }}</a>
-								          <p class="sm-text">{{entry.postDate|date('F j, Y')}}</p>
-
+								<p class="sm-text">{{entry.postDate|date('F j, Y')}}</p>
 							{% endfor %}
 						</nav>
 					</section>
