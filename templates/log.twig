@@ -26,7 +26,7 @@
                 {% case "image" %}
 
                     {% set image = block.image[0] ?? null %}
-                    <a href="{{ image.getUrl('large') }}" data-lightbox="lightbox" data-title="{{ block.caption }}">
+                    <a href="{{ image.getUrl('medium') }}" data-lightbox="lightbox" data-title="{{ block.caption }}">
                       <img class="image" src="{{ image.getUrl('small') }}" title="{{ image.title }}" alt="{{ image.title }}"/>
                     </a>
 
