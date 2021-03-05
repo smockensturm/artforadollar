@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5900da18b2ebf7148577108e10315ded",
+    "content-hash": "ef728d168e9b8e36da06f99811cca04a",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -283,11 +283,11 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.0.8",
+            "version": "2.0.10",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/62139b2806178adb979d76bd3437534a1a9fd490",
-                "reference": "62139b2806178adb979d76bd3437534a1a9fd490",
+                "url": "https://api.github.com/repos/composer/composer/zipball/890c79ff096818e762b42c9624ca1df800ab789b",
+                "reference": "890c79ff096818e762b42c9624ca1df800ab789b",
                 "shasum": ""
             },
             "require": {
@@ -347,7 +347,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2020-12-03T16:20:39+00:00"
+            "time": "2021-02-23T15:11:37+00:00"
         },
         {
             "name": "composer/semver",
@@ -546,15 +546,15 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.6.6",
+            "version": "3.6.8",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/e7df93cffb09041f24af5b44f8b1215036e1cb35",
-                "reference": "e7df93cffb09041f24af5b44f8b1215036e1cb35",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/61a3206f209f86f1c1d855bbf8f3a3bdfe73d65c",
+                "reference": "61a3206f209f86f1c1d855bbf8f3a3bdfe73d65c",
                 "shasum": ""
             },
             "require": {
-                "composer/composer": "2.0.8",
+                "composer/composer": "2.0.10",
                 "craftcms/oauth2-craftid": "~1.0.0",
                 "craftcms/plugin-installer": "~1.5.6",
                 "craftcms/server-check": "~1.2.0",
@@ -628,7 +628,7 @@
                 "docs": "https://craftcms.com/docs/3.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2021-02-15T19:50:53+00:00"
+            "time": "2021-03-03T19:27:38+00:00"
         },
         {
             "name": "craftcms/feed-me",
@@ -1617,15 +1617,15 @@
         },
         {
             "name": "laminas/laminas-zendframework-bridge",
-            "version": "1.1.1",
+            "version": "1.2.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/6ede70583e101030bcace4dcddd648f760ddf642",
-                "reference": "6ede70583e101030bcace4dcddd648f760ddf642",
+                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/6cccbddfcfc742eb02158d6137ca5687d92cee32",
+                "reference": "6cccbddfcfc742eb02158d6137ca5687d92cee32",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.6 || ^7.0 || ^8.0"
+                "php": "^7.3 || ^8.0"
             },
             "type": "library",
             "extra": {
@@ -1651,7 +1651,7 @@
                 "laminas",
                 "zf"
             ],
-            "time": "2020-09-14T14:23:00+00:00"
+            "time": "2021-02-25T21:54:58+00:00"
         },
         {
             "name": "league/csv",
@@ -2818,6 +2818,56 @@
                 "phar"
             ],
             "time": "2020-07-07T18:42:57+00:00"
+        },
+        {
+            "name": "supercool/buttonbox",
+            "version": "2.0.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/supercool/buttonbox/zipball/9123c54dfb5d8e536fafb47211ef4fdcfbd155f1",
+                "reference": "9123c54dfb5d8e536fafb47211ef4fdcfbd155f1",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Button Box",
+                "handle": "buttonbox",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/supercool/buttonbox/master/CHANGELOG.md",
+                "class": "supercool\\buttonbox\\ButtonBox"
+            },
+            "autoload": {
+                "psr-4": {
+                    "supercool\\buttonbox\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Supercool",
+                    "homepage": "http://supercooldesign.co.uk"
+                }
+            ],
+            "description": "A collection of utility field types for Craft",
+            "keywords": [
+                "buttonbox",
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "docs": "https://github.com/supercool/buttonbox/blob/master/README.md",
+                "issues": "https://github.com/supercool/buttonbox/issues"
+            },
+            "time": "2019-06-19T23:54:29+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

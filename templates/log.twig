@@ -1,41 +1,65 @@
 {% extends "_layout" %}
-
-{% if craft.app.request.getSegment(1) %}
-  {% set slug = craft.app.request.getSegment(1) %}
-{% else %}
-  {% set slug = "the-latest" %}
-{% endif %}
     
 {% block content %}
+
+{% set criteria = {section: 'logs', orderBy: 'postDate', limit: null} %}
+{% set prev = entry.getPrev(criteria) %}
+{% set next = entry.getNext(criteria) %}
 
 <section>
   <div class="container copy">
       <div class="page-content">
         <div class="readable">
-          <h2>{{ entry.title }}</h2>
-          <p class="sm-text">{{entry.postDate|date('F j, Y')}}</p>
-          {% set blocks  = entry.logBlocks.all() %}
-          {% for block in blocks %}
 
-            {% switch block.type %}
+          <article class="article">
+              <h2>{{ entry.title }}</h2>
+              <p class="sm-text">{{entry.postDate|date('F j, Y')}}</p>
+              {% set blocks  = entry.logBlocks.all() %}
+              {% for block in blocks %}
 
-                {% case "richText" %}
+                {% switch block.type %}
 
-                    {{ block.richText }}
+                    {% case "richText" %}
 
-                {% case "image" %}
+                        {{ block.richText }}
 
-                    {% set image = block.image[0] ?? null %}
-                    <a href="{{ image.getUrl('medium') }}" data-lightbox="lightbox" data-title="{{ block.caption }}">
-                      <img class="image" src="{{ image.getUrl('small') }}" title="{{ image.title }}" alt="{{ image.title }}"/>
-                    </a>
+                    {% case "image" %}
 
-                {% default %}
+                        {% set image = block.image[0] ?? null %}
+                        <a href="{{ image.getUrl('medium') }}" data-lightbox="lightbox" data-title="{{ block.caption }}">
+                          <img class="image {{block.imageWidth }} {{block.alignment }}" src="{{ image.getUrl('small') }}" title="{{ image.title }}" alt="{{ image.title }}"/>
+                        </a>
 
-            {% endswitch %}
+                    {% default %}
 
-          {% endfor %}
+                {% endswitch %}
+
+              {% endfor %}
+        </article>
+       
+        <div class="pager clearfix">
+          <div class="prev">
+          {% if prev %}
+            <a class="" href="{{ prev.url }}">&#8592; {{ prev.title }}</a>
+          {% endif %}
+          </div>
+
+          <div class="next">
+          {% if next %}
+            <a class="" href="{{ next.url }}">{{ next.title }} &#8594;</a>
+          {% endif %}
+          </div>
         </div>
+       
+       
+       
+       
+       
+        </div>
+
+
+        
+        
       </div>
   </div>
 </section>

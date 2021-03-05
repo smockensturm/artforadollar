@@ -96,6 +96,28 @@ nav ul {
       width: 100%;
       height: auto;
       padding: 1rem 0;
+      &.half {
+        width: 40%;
+      }
+      &.left {
+        float: left;
+        margin: 1rem 2rem 1rem 0;
+        padding: 0;
+      }
+      &.right {
+        float: right;
+        margin: 1rem 0 1rem 2rem;
+        padding: 0;
+      }
+      @media screen and (max-width: 576px) {
+        &.half,
+        &.left,
+        &.right {
+          width: 100%;
+          height: auto;
+          padding: 1rem 0;
+        }
+      }
     }
     a {
       font-weight: 600;
@@ -105,11 +127,32 @@ nav ul {
     a:hover{
       color:#859ae2;
     }
+    a[data-lightbox="lightbox"] {
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
     @media screen and (max-width: 768px) {
       width: 100%;
       margin: 0;
     }
   }
+}
+
+.article {
+  margin-bottom: 2rem;
+  overflow:hidden;
+}
+
+.pager {
+  display: grid;
+  font-size: .8rem;
+  padding: 2rem 0;
+  border-top: 1px solid #ccc;
+  grid-template-columns: 1fr 1fr;
+    .next {
+      text-align: right;
+     }
 }
 
 footer .wrapper {
@@ -121,4 +164,8 @@ footer .wrapper {
   }
   padding: 4rem;
   margin: 0 auto;
+}
+
+.clearfix {
+  clear: both;
 }

@@ -1,20 +1,38 @@
-field: 385ea997-6d59-4816-a529-29d66a8c43b8
+field: 385ea997-6d59-4816-a529-29d66a8c43b8 # Log Blocks
 fieldLayouts:
   a2786c67-efe1-46a3-97de-ecc670ccc96a:
     tabs:
       -
         elements:
           -
-            fieldUid: e5c502b2-96a0-40e8-906e-90865c246d78
+            fieldUid: e5c502b2-96a0-40e8-906e-90865c246d78 # Image
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 50
           -
-            fieldUid: 24d54bcc-c58c-43d8-b3e0-501f1e9301d3
+            fieldUid: 26b3cb3e-26b5-4a51-895f-09ac38ddd2f5 # Image Width
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: dd581b2f-56b7-4559-b893-329b66618f29 # Alignment
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 24d54bcc-c58c-43d8-b3e0-501f1e9301d3 # Caption
             instructions: null
             label: null
             required: false
@@ -25,7 +43,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  24d54bcc-c58c-43d8-b3e0-501f1e9301d3:
+  24d54bcc-c58c-43d8-b3e0-501f1e9301d3: # Caption
     contentColumnType: text
     fieldGroup: null
     handle: caption
@@ -53,7 +71,120 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  e5c502b2-96a0-40e8-906e-90865c246d78:
+  26b3cb3e-26b5-4a51-895f-09ac38ddd2f5: # Image Width
+    contentColumnType: text
+    fieldGroup: null
+    handle: imageWidth
+    instructions: ''
+    name: 'Image Width'
+    searchable: false
+    settings:
+      displayAsGraphic: '1'
+      displayFullwidth: ''
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Half
+            -
+              - showLabel
+              - ''
+            -
+              - value
+              - half
+            -
+              - imageUrl
+              - /assets/col-2.png
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Full
+            -
+              - showLabel
+              - ''
+            -
+              - value
+              - full
+            -
+              - imageUrl
+              - /assets/col-1.png
+            -
+              - default
+              - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: supercool\buttonbox\fields\Buttons
+  dd581b2f-56b7-4559-b893-329b66618f29: # Alignment
+    contentColumnType: text
+    fieldGroup: null
+    handle: alignment
+    instructions: ''
+    name: Alignment
+    searchable: false
+    settings:
+      displayAsGraphic: '1'
+      displayFullwidth: ''
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Left
+            -
+              - showLabel
+              - ''
+            -
+              - value
+              - left
+            -
+              - imageUrl
+              - /assets/align-left.png
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Center
+            -
+              - showLabel
+              - ''
+            -
+              - value
+              - center
+            -
+              - imageUrl
+              - /assets/align-center.png
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Right
+            -
+              - showLabel
+              - ''
+            -
+              - value
+              - right
+            -
+              - imageUrl
+              - /assets/align-right.png
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: supercool\buttonbox\fields\Buttons
+  e5c502b2-96a0-40e8-906e-90865c246d78: # Image
     contentColumnType: string
     fieldGroup: null
     handle: image

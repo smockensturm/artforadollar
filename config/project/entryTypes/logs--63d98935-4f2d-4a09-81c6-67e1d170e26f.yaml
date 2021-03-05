@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 385ea997-6d59-4816-a529-29d66a8c43b8
+            fieldUid: 385ea997-6d59-4816-a529-29d66a8c43b8 # Log Blocks
             instructions: null
             label: null
             required: false

@@ -1,9 +1,13 @@
-dateModified: 1613749790
+dateModified: 1614882722
 email:
   fromEmail: smockensturm@gmail.com
   fromName: 'The Kidder'
   transportType: craft\mail\transportadapters\Sendmail
 plugins:
+  buttonbox:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   feed-me:
     edition: standard
     enabled: true
@@ -25,7 +29,7 @@ system:
   live: true
   name: 'Art For A Dollar'
   retryDuration: null
-  schemaVersion: 3.6.4
+  schemaVersion: 3.6.6
   timeZone: America/Detroit
 users:
   allowPublicRegistration: false
