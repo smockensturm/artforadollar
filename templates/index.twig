@@ -22,7 +22,7 @@
 				{% set entries = entry.work.with('mainImage').all() %}
 				{% for entry in entries %}
 					{% set image = entry.mainImage[0] ?? null %}
-					{% set caption = "<span class='name'>" ~ entry.title ~ "</span>, " ~ entry.media|lower ~", "~ entry.dimensions.height ~" x "~ entry.dimensions.width ~" inches, "~ entry.yearOfCompletion %}
+					{% set caption = "<span class='name'>" ~ entry.title ~ "</span>" ~ (entry.media ? ", "~entry.media|lower :"")~ (entry.dimensions.height ? ", " ~ entry.dimensions.height ~ " x " ~ entry.dimensions.width ~" inches": "" ) ~ ( entry.yearOfCompletion ? ", "~entry.yearOfCompletion:"") %}
 					<div class="{{ slug=='99days' ? 'shop-item-99days' : 'shop-item'}} {{ entry.doubleWide=='1' ? 'double-wide' : ''}}">
 						<a href="{{ image.getUrl('large') }}" data-lightbox="lightbox" data-title="{{ caption }}">
 							<img class="image" src="{{ image.getUrl('small') }}" title="{{ entry.title }}" alt="{{ entry.title }}"/>
