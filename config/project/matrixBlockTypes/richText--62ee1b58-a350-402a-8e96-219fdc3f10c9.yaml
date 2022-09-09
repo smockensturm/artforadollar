@@ -1,11 +1,11 @@
-field: 385ea997-6d59-4816-a529-29d66a8c43b8 # Log Blocks
+field: 385ea997-6d59-4816-a529-29d66a8c43b8
 fieldLayouts:
   8266736b-58a3-49fb-aa56-4f8b9e8bc60b:
     tabs:
       -
         elements:
           -
-            fieldUid: 0f3b9de6-d21c-4e57-a00c-1397e3de616f # Rich Text
+            fieldUid: 0f3b9de6-d21c-4e57-a00c-1397e3de616f
             instructions: null
             label: null
             required: false
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  0f3b9de6-d21c-4e57-a00c-1397e3de616f: # Rich Text
+  0f3b9de6-d21c-4e57-a00c-1397e3de616f:
     contentColumnType: text
     fieldGroup: null
     handle: richText

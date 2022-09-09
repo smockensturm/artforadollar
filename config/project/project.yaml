@@ -1,17 +1,27 @@
-dateModified: 1614882722
+dateModified: 1662731822
 email:
   fromEmail: smockensturm@gmail.com
   fromName: 'The Kidder'
   transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    6bb72f59-38e0-44af-8d40-007a0928ed86: Width # Width
+    8fd294e0-ce65-4ea8-8dcd-bcd90a644b8e: Height # Height
+    20e6e623-a677-471b-b89c-3856d7fdbd1e: Image # Image
+    24d54bcc-c58c-43d8-b3e0-501f1e9301d3: Caption # Caption
+    26b3cb3e-26b5-4a51-895f-09ac38ddd2f5: 'Image Width' # Image Width
+    884b260b-58b8-4361-9363-1e2d22484526: Dimensions # Dimensions
+    dd581b2f-56b7-4559-b893-329b66618f29: Alignment # Alignment
+    e5c502b2-96a0-40e8-906e-90865c246d78: Image # Image
 plugins:
   buttonbox:
     edition: standard
     enabled: true
-    schemaVersion: 1.0.0
+    schemaVersion: 2.0.0
   feed-me:
     edition: standard
     enabled: true
-    schemaVersion: 4.3.0
+    schemaVersion: 4.4.0
   obfuscator:
     edition: standard
     enabled: true
@@ -29,7 +39,7 @@ system:
   live: true
   name: 'Art For A Dollar'
   retryDuration: null
-  schemaVersion: 3.6.6
+  schemaVersion: 3.7.33
   timeZone: America/Detroit
 users:
   allowPublicRegistration: false

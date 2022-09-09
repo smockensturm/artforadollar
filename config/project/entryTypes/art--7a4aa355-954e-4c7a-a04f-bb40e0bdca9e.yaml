@@ -63,7 +63,7 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            fieldUid: 884b260b-58b8-4361-9363-1e2d22484526
+            fieldUid: 884b260b-58b8-4361-9363-1e2d22484526 # Dimensions
             instructions: null
             label: null
             required: false
