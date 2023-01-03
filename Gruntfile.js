@@ -76,9 +76,7 @@ module.exports = function(grunt) {
       livereload: {
         options: {
           livereload: {
-            port: 9000,
-            key: grunt.file.read("../localhost.key"),
-            cert: grunt.file.read("../localhost.crt")
+            port: 35729,
           }
         },
         files: [

@@ -9,27 +9,30 @@
 {% set entry = craft.entries.slug(slug).one() %}
 
 {% block content %}
-	<section>
-		<div class="container shop">
-			<div class="page-head">
-				<div class="intro">
-					<h1>{{ entry.head }}</h1>
-				</div>
-				<p class="">{{ entry.sub }}</p>
-			</div>
-			<div class="shop-grid">
-				<article class="{{ slug=='99days' ? 'col-sizer-99days' : 'col-sizer'}}"></article>
-				{% set entries = entry.work.with('mainImage').all() %}
-				{% for entry in entries %}
-					{% set image = entry.mainImage[0] ?? null %}
-					{% set caption = "<span class='name'>" ~ entry.title ~ "</span>" ~ (entry.media ? ", "~entry.media|lower :"")~ (entry.dimensions.height ? ", " ~ entry.dimensions.height ~ " x " ~ entry.dimensions.width ~" inches": "" ) ~ ( entry.yearOfCompletion ? ", "~entry.yearOfCompletion:"") %}
-					<div class="{{ slug=='99days' ? 'shop-item-99days' : 'shop-item'}} {{ entry.doubleWide=='1' ? 'double-wide' : ''}}">
-						<a href="{{ image.getUrl('large') }}" data-lightbox="lightbox" data-title="{{ caption }}">
-							<img class="image" src="{{ image.getUrl('small') }}" title="{{ entry.title }}" alt="{{ entry.title }}"/>
-						</a>
-					</div>
-				{% endfor %}
+
+	<div class="parallax-window" data-parallax="scroll" data-position="center center" data-image-src="/images/faux01.jpg"></div>
+
+	{# <section style="height: 100vh;">
+		<div class="container splash">
+			<div >
+				Hello World
 			</div>
 		</div>
+	</section> #}
+
+	<section>
+		<div class="container">
+			<article>
+				<h2>I use pigments and oils, brushes and knives to make pictures on wood and canvas. I tend to work loose and slow, building layers, pushing edges around, pitting dark against light. My approach to painting is vocational; there is work to do and there are problems to solve.</h2>
+			</article>
+		</div>
 	</section>
-	{% endblock %}
+
+	<div class="parallax-window" data-parallax="scroll" data-image-src="/assets/images/IMG_0697.jpg"></div>
+
+	<section>
+		<div class="container">
+			Section
+		</div>
+	</section>
+{% endblock %}
