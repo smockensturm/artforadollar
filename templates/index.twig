@@ -1,35 +1,28 @@
 {% extends "_layout" %}
 
-{% if craft.app.request.getSegment(1) %}
-	{% set slug = craft.app.request.getSegment(1) %}
-{% else %}
-	{% set slug = "the-latest" %}
-{% endif %}
-
-{% set entry = craft.entries.slug(slug).one() %}
-
 {% block content %}
-	<section>
-		<div class="container shop">
-			<div class="page-head">
-				<div class="intro">
-					<h1>{{ entry.head }}</h1>
-				</div>
-				<p class="">{{ entry.sub }}</p>
+	<section style="background-image: url(/assets/images/dragon.jpg);background-size: cover; background-position: center center;">
+		<div class="vessels container">
+			<div>
+			S. Mockensturm<br/>
+			<h1>Still:Life</h1>
+			New Paintings<br/>
 			</div>
-			<div class="shop-grid">
-				<article class="{{ slug=='99days' ? 'col-sizer-99days' : 'col-sizer'}}"></article>
-				{% set entries = entry.work.with('mainImage').all() %}
-				{% for entry in entries %}
-					{% set image = entry.mainImage[0] ?? null %}
-					{% set caption = "<span class='name'>" ~ entry.title ~ "</span>" ~ (entry.media ? ", "~entry.media|lower :"")~ (entry.dimensions.height ? ", " ~ entry.dimensions.height ~ " x " ~ entry.dimensions.width ~" inches": "" ) ~ ( entry.yearOfCompletion ? ", "~entry.yearOfCompletion:"") %}
-					<div class="{{ slug=='99days' ? 'shop-item-99days' : 'shop-item'}} {{ entry.doubleWide=='1' ? 'double-wide' : ''}}">
-						<a href="{{ image.getUrl('large') }}" data-lightbox="lightbox" data-title="{{ caption }}">
-							<img class="image" src="{{ image.getUrl('small') }}" title="{{ entry.title }}" alt="{{ entry.title }}"/>
-						</a>
-					</div>
-				{% endfor %}
+
+			<div>
+			<br/>
+			<h3>July 10- August 29, 2023</h3>
+			<br/>
+			Fisher/Wall Art Gallery @ MCPA<br/>
+			200 W. Main Cross Street<br/>
+			Findlay, Ohio<br/>
+			</div>
+
+			<div class="naav" style="margin-right: 0;">
+				<br/>
+				<a href="/assets/pdf/statement_smockensturm.pdf">Statement <i class="far fa-file-pdf"></i></a>
+				<a href="/assets/pdf/cv_smockensturm.pdf">C.V. <i class="far fa-file-pdf"></i></a>
 			</div>
 		</div>
 	</section>
-	{% endblock %}
+{% endblock %}

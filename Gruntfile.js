@@ -1,4 +1,8 @@
 module.exports = function(grunt) {
+
+  const sass = require('node-sass');
+  require('load-grunt-tasks')(grunt);
+
   grunt.initConfig({
     uglify: {
       options: {
@@ -19,7 +23,8 @@ module.exports = function(grunt) {
       options: {
         sourceMap: true,
         precision: 4,
-        outputStyle: "compact"
+        outputStyle: "compact",
+        implementation: sass
       },
       dist: {
         files: {
@@ -58,27 +63,11 @@ module.exports = function(grunt) {
       }
     },
 
-    mjml: {
-      options: {},
-      htmlEmail: {
-        expand: true,
-        cwd: "templates/email/",
-        src: "*/*.html",
-        dest: "templates/email/",
-        mode: "html",
-        rename: function(dest, src) {
-          return dest + src.replace("/", "/compiled/");
-        }
-      }
-    },
-
     watch: {
       livereload: {
         options: {
           livereload: {
-            port: 9000,
-            key: grunt.file.read("../localhost.key"),
-            cert: grunt.file.read("../localhost.crt")
+            port: 35729,
           }
         },
         files: [
@@ -104,13 +93,12 @@ module.exports = function(grunt) {
 
   grunt.registerTask("script", ["uglify"]);
   grunt.registerTask("style", ["sass", "concat", "postcss"]);
-  grunt.registerTask("email", ["mjml"]);
-  grunt.registerTask("default", ["script", "style", "email", "watch"]);
+  grunt.registerTask("default", ["script", "style", "watch"]);
+
 
   grunt.loadNpmTasks("grunt-sass");
-  grunt.loadNpmTasks("grunt-postcss");
+  grunt.loadNpmTasks('@lodder/grunt-postcss');
   grunt.loadNpmTasks("grunt-contrib-concat");
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-watch");
-  grunt.loadNpmTasks("grunt-mjml");
 };
