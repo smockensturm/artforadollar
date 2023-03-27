@@ -10,16 +10,19 @@ h6 {
     margin:0;
 }
 h1 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 800;
-    @include fluid-type(font-size, 300px, 1600px, 24px, 30px);
-    @include fluid-type(line-height, 300px, 1600px, 32px, 42px);
+    font-family: futura-pt, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    @include fluid-type(font-size, 300px, 1600px, 48px, 56px);
+    @include fluid-type(line-height, 300px, 1600px, 36px, 48px);
     letter-spacing: -.5px;
     line-height: 2.5rem;
+    margin: .25rem 0 .1rem 0;
 }
 h2 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 800;
+  font-family: futura-pt, sans-serif;
+  font-weight: 600;
+  font-style: normal;
   @include fluid-type(font-size, 300px, 1600px, 26px, 32px);
   @include fluid-type(line-height, 300px, 1600px, 28px, 34px);
   letter-spacing: -.03rem;
@@ -135,3 +138,9 @@ p {
   padding-bottom: 20px;
   text-transform: uppercase;
 }
+
+
+
+// font-family: "futura-pt-condensed", sans-serif;
+// font-weight: 700;
+// font-style: normal;

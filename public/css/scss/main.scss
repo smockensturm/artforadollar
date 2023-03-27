@@ -14,11 +14,12 @@ html {
 }
 
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: futura-pt, sans-serif;
   font-weight: 300;
+  font-style: normal;
   position: relative;
   margin: 0;
-  background-color: #f6f6f6;
+  background-color: black;
 }
 
 section{
@@ -123,7 +124,7 @@ nav ul {
 }
 
 section {
-  min-height: 400px;
+  min-height: 100vh;
   .container {
     height: 100%;
     article {
@@ -224,4 +225,32 @@ footer .wrapper {
 
 .clearfix {
   clear: both;
+}
+
+
+.vessels {
+  color: white;
+  padding: 6vh 6vw 6vh 12vw;
+  display: flex;
+  //display: grid;
+    //grid-template-columns: 1fr 1fr 1fr;
+  div {
+    margin-right: 5vw;
+    a {
+      color: white;
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: .25rem 0;
+      transition:all 200ms ease;
+      &:hover {
+        color: #859ae2;
+      }
+    }
+  }
+  @media screen and (max-width: $sm) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
 }
