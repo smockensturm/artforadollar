@@ -9,13 +9,13 @@
       }
   ],
   "require": {
-    "craftcms/cms": "3.7.53.1",
+    "craftcms/cms": "3.7.61",
     "vlucas/phpdotenv": "^3.4.0",
     "craftcms/aws-s3": "^1.2.5",
     "craftcms/redactor": "^2.4.0",
     "doublesecretagency/craft-cpcss": "^2.2.0",
     "dutchheight/aws-serverless-image-handler": "^1.1.2",
-    "verbb/super-table": "2.7.2",
+    "verbb/super-table": "2.7.3",
     "craftcms/feed-me": "4.5.3",
     "miranj/craft-obfuscator": "1.1.1",
     "verbb/buttonbox": "^3.1"
