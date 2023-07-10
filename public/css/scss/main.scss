@@ -2,7 +2,7 @@
 @import "content-blocks/content-blocks";
 
 // spacers
-$page-margin: 6vw;
+$page-margin: 12vw;
 $spacer: 6vw;
 $gutter: 3vw;
 
@@ -20,10 +20,40 @@ body{
   position: relative;
   margin: 0;
   background-color: black;
+  // background-image: url('/assets/images/dragon.jpg');
+  background-size: auto 100%;
+  background-position: top center;
+
+  @media screen and (min-width: 768px) {
+    background-size: 100% auto;
+    background-position: top center;
+  }
+  @media screen and (min-width: 1024px) {
+    background-size: 100% auto;
+    background-position: top center;
+  }
+  // @media screen and (max-width: 768px) {
+  //   background-size: 100% auto;
+  // }
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+a {
+  color: white;
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: .25rem 0;
+  transition:all 200ms ease;
+  &:hover {
+    color: #859ae2;
+  }
 }
 
 section{
   padding: 0;
+  background-color: #ccc;
 }
 .container{
   display: grid;
@@ -37,8 +67,8 @@ article{
 
 p{
   font-size: 1.1rem;
-  line-height: 1.6rem;
-  &:last-child{
+  line-height: 1.3rem;
+  &:last-child {
     margin-bottom: 0;
   }
 }
@@ -86,6 +116,17 @@ nav ul {
 
 }
 
+section.splash {
+  background-color: transparent;
+  height: 50vh;
+  // @media screen and (min-width: 768px) {
+  //   height: 90vh;
+  // }
+  // @media screen and (min-width: 1024px) {
+  //   height: 100vh;
+  }
+
+
 // section.full{
 //   display: block;
 //   position: fixed;
@@ -118,13 +159,10 @@ nav ul {
 //   position: relative;
 // }
 
-.parallax-window {
-  min-height: 400px;
-  background: transparent;
-}
+
 
 section {
-  min-height: 100vh;
+  //min-height: 100vh;
   .container {
     height: 100%;
     article {
@@ -212,30 +250,46 @@ section {
      }
 }
 
-footer .wrapper {
-  grid-column: 2 / span 12;
-  width: 25%;
-  @media screen and (max-width: $sm) {
-    width: 50%;
-    padding: 2rem;
+footer {
+  background-color: rgb(49, 52, 47);
+  box-shadow: 4px 4px 10px #000000;
+  color: white;
+  .wrapper {
+    grid-column: 2 / span 12;
+    width: 25%;
+    @media screen and (max-width: $sm) {
+      width: 50%;
+      padding: 2rem;
+    }
+    padding: 4rem;
+    margin: 0 auto;
   }
-  padding: 4rem;
-  margin: 0 auto;
 }
 
 .clearfix {
   clear: both;
 }
 
+.parallax-window {
+	min-height: 500px;
+	background: transparent;
+}
+
 
 .vessels {
   color: white;
+  background-color: rgb(49, 52, 47);
+  box-shadow: 4px 4px 10px #000000;
   padding: 6vh 6vw 6vh 12vw;
   display: flex;
   //display: grid;
     //grid-template-columns: 1fr 1fr 1fr;
   div {
     margin-right: 5vw;
+    p {
+      margin: 0;
+      font-weight: 400;
+    }
     a {
       color: white;
       display: block;
@@ -248,9 +302,41 @@ footer .wrapper {
       }
     }
   }
-  @media screen and (max-width: $sm) {
+  @media screen and (max-width: $md) {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: auto auto minmax(0, 1fr);
   }
 
+}
+
+.statement {
+  color: white;
+  background-color: rgb(49, 52, 47);
+  box-shadow: 0px 0px 20px #000000;
+  padding: 4rem $page-margin;
+  display: block;
+  &.container article {
+    display: block;
+    position: relative;
+    h2.quoted:before {
+      content: '';
+      background-image: url('../assets/quote-left-light.svg');
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      // z-index: -10;
+      opacity: .4;
+      // width: 3vw;
+    }
+    &.center {
+      text-align: center;
+    }
+    &.right {
+      text-align: right;
+    }
+  }
 }
