@@ -1,5 +1,12 @@
 function initMain() {
 
+    console.log('initMain');
+
+    // $('.parallax-window').parallax({
+    //     naturalWidth: 600,
+    //     naturalHeight: 400
+    //   });
+
 
       // init Masonry
     var $grid  = $('.shop-grid').masonry({

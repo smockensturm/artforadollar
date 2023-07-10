@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	{% set version = '0.01' %}
+	{% set version = '0.3' %}
 
 	{% include '_includes/global/head' with {version: version} %}
 
@@ -11,7 +11,7 @@
 			{% block content %}{% endblock %}
 		</main>
 
-		{# {% include '_includes/global/footer' %} #}
+		{% include '_includes/global/footer' %}
 
 		{# <div class="hamburger-nav-wrapper">
 
