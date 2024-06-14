@@ -301,6 +301,9 @@ footer {
         color: #859ae2;
       }
     }
+    h2 {
+      font-weight: 300;
+    }
   }
   @media screen and (max-width: $md) {
     display: grid;
